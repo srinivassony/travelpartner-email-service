@@ -31,8 +31,8 @@ public class UserEmailConsumer {
 				String subject = (String) message.get("subject");
 
 				String content = (String) message.get("content");
-				
-				logger.info("input params: {}",  toEmailId, subject, content);
+
+				logger.info("input params: {}", toEmailId, subject, content);
 
 				String emailResponse = emailServiceConfig.sendNotification(toEmailId, subject, content);
 
